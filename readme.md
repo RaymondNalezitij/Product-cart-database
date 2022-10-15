@@ -1,3 +1,15 @@
+<h1>Description</h1>
+
+Product and cart page using laravel framework.
+
+Using the app you can:
+- Add, remove & update product stock at any time.
+- Manage user cart by adding or removing products.
+- Get cart subtotal, vat amount and total at any time.
+- Register and login as a user
+
+The code is entirely english.
+
 <h1>Project requirements</h1>
 
 ---
@@ -45,7 +57,3 @@
 9. To test the functions run ```php artisan test```
 
 10. To run the project in your terminal run : ```php artisan serve```
-
-<h1>After starting</h1>
-
-The page uses registration and login. To use the functions, you need to register and login.

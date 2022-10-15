@@ -16,9 +16,16 @@
                                 <h1 style="font-size: 18px">{{ $product->name }} - {{ $product->price/100 }} €</h1>
                                 <form method="POST" action="{{ route('dashboard.addToCart') }}">
                                     @csrf
-                                    <input type="hidden" name="productId" value="{{ $product->id }}">
-                                    <input type="hidden" name="price" value="{{ $product->price }}">
-                                    <input style="max-width: 80px" type="number" min="1" max="{{ $product->quantity }}" name="orderQuantity" value="1">
+                                    <label>
+                                        <input type="hidden" name="productId" value="{{ $product->id }}">
+                                    </label>
+                                    <label>
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                    </label>
+                                    <label>
+                                        <input style="max-width: 80px" type="number" min="1"
+                                               max="{{ $product->quantity }}" name="orderQuantity" value="1">
+                                    </label>
                                     <button style="font-size: 12px" type="submit">Add to cart
                                     </button>
                                 </form>
@@ -37,10 +44,12 @@
                                                     <h1>{{ $product->name }}</h1>
                                                     <form method="POST" action="{{ route('dashboard.editCart') }}">
                                                         @csrf
-                                                        <input type="number"
-                                                               style="margin-left: 5px; width: 40px; padding: 0"
-                                                               name="quantity"
-                                                               value="{{ $cartProduct->quantity }}">
+                                                        <label>
+                                                            <input type="number"
+                                                                   style="margin-left: 5px; width: 40px; padding: 0"
+                                                                   name="quantity"
+                                                                   value="{{ $cartProduct->quantity }}">
+                                                        </label>
                                                         <input type="hidden" name="cartId"
                                                                value="{{ $cartProduct->id }}">
                                                         <button style="font-size: 12px" type="submit">Edit
@@ -61,15 +70,15 @@
                             @endforeach
                             <div style="display: flex; flex-direction: row; justify-content: space-between">
                                 <div>
-                                    <h1 style="font-size: 20px">Subtotal:</h1>
+                                    <h1 style="font-size: 18px">Subtotal:</h1>
                                     <h1> {{ $cartTotal / 100 / 100}} €</h1>
                                 </div>
                                 <div>
-                                    <h1 style="font-size: 20px">VAT total:</h1>
+                                    <h1 style="font-size: 18px">VAT total:</h1>
                                     <h1> {{ $cartTotal/100/100*21 / 100}} €</h1>
                                 </div>
                                 <div>
-                                    <h1 style="font-size: 20px">Total:</h1>
+                                    <h1 style="font-size: 18px">Total:</h1>
                                     <h1> {{ ($cartTotal/100 + $cartTotal/100/100*21) / 100}} €</h1>
                                 </div>
                                 <div style="padding-top: 20px">
