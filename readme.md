@@ -1,3 +1,9 @@
+<h2 align="center"> Webpage Preview </h2>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/102956031/196000623-e0b3ea1e-9509-49dd-8275-2b01e2f2ee0f.gif">
+</p>
+
+
 <h1>Description</h1>
 
 Product and cart page using laravel framework.
@@ -8,7 +14,7 @@ Using the app you can:
 - Get cart subtotal, vat amount and total at any time.
 - Register and login as a user
 
-The code is entirely english.
+The code is wirtten entirely in english.
 
 <h1>Project requirements</h1>
 
